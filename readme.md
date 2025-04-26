@@ -2,17 +2,6 @@
 
 **Mario Kart 8 Deluxe** é um dos jogos mais divertidos e emocionantes da Nintendo, trazendo corridas alucinantes com personagens icônicos do universo Mario. Este projeto é uma **landing page** interativa criada para divulgar o jogo e suas principais características de forma envolvente e colorida!
 
-## 🚗 **Sobre o Jogo**
-**Mario Kart 8 Deluxe** é uma versão expandida de **Mario Kart 8**, lançada para o **Nintendo Switch**. Com gráficos incríveis, novos modos de jogo, pistas emocionantes e a possibilidade de jogar tanto online quanto localmente, o jogo é ideal para fãs de corridas e para quem adora a diversão com os amigos. 
-
-Corra em pistas com gravidade alterada, use itens especiais e vença seus amigos de maneiras criativas e únicas!
-
-### **Principais Características:**
-- **Modos Multiplayer**: Jogue online ou localmente com até 8 jogadores.
-- **Pistas e Personagens Icônicos**: Conheça as pistas mais famosas e os personagens do universo Mario.
-- **Gráficos Imersivos**: Acelere com visuais de alta qualidade no Nintendo Switch.
-- **Itens Especiais**: Use itens para atrapalhar seus oponentes e ganhar vantagem.
-
 ---
 
 ## 💻 **Tecnologias Utilizadas**
@@ -32,3 +21,16 @@ Para rodar este projeto localmente, siga os passos abaixo:
 1. **Clone este repositório**:
    ```bash
    git clone https://github.com/Leozinnh/MarioKart.git
+
+---
+
+## 🚗 **Sobre o Jogo**
+**Mario Kart 8 Deluxe** é uma versão expandida de **Mario Kart 8**, lançada para o **Nintendo Switch**. Com gráficos incríveis, novos modos de jogo, pistas emocionantes e a possibilidade de jogar tanto online quanto localmente, o jogo é ideal para fãs de corridas e para quem adora a diversão com os amigos. 
+
+Corra em pistas com gravidade alterada, use itens especiais e vença seus amigos de maneiras criativas e únicas!
+
+### **Principais Características:**
+- **Modos Multiplayer**: Jogue online ou localmente com até 8 jogadores.
+- **Pistas e Personagens Icônicos**: Conheça as pistas mais famosas e os personagens do universo Mario.
+- **Gráficos Imersivos**: Acelere com visuais de alta qualidade no Nintendo Switch.
+- **Itens Especiais**: Use itens para atrapalhar seus oponentes e ganhar vantagem.
