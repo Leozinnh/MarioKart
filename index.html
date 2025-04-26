@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarioKart</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+
+<body class="m-0 p-0 w-full h-full overflow-x-hidden">
+    <section class="relative w-full h-screen overflow-hidden -z-10">
+        <video id="background-video1" autoplay muted loop playsinline preload="auto"
+            class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            style="background: url('./assets/img/bg.jpeg') no-repeat;">
+            <source src="./assets/media/bg1.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+
+        <div class="absolute inset-0 bg-black opacity-50" style="backdrop-filter: blur(10px);"></div>
+
+        <div class="relative flex items-center justify-around flex-row flex-wrap h-screen z-10">
+            <div class="relative w-1/2 min-w-24 flex flex-col items-start justify-center text-white py-4 px-12">
+                <img class="relative w-96 mb-6" src="./assets/img/deluxe2.png" alt="Mario Kart 8 Deluxe">
+                <p
+                    class="relative max-w-3/4 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl leading-relaxed text-center sm:text-left mb-8 pl-4">
+                    Mario Kart 8 Deluxe é um jogo de corrida da Nintendo onde você controla personagens icônicos do
+                    universo Mario.
+                    Corra por pistas emocionantes, use itens especiais e enfrente amigos em modos multiplayer local e
+                    online.
+                    Com gráficos incríveis e jogabilidade divertida, é a escolha perfeita para qualquer fã de corridas!
+                </p>
+                <div class="flex justify-center pl-4">
+                    <a href="#"
+                        class="relative inline-block px-8 py-3 font-bold text-white text-xl rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out overflow-hidden">
+                        <span class="absolute inset-0 bg-white opacity-10 blur-md"></span>
+                        <span class="relative z-10">Jogar Agora</span>
+                    </a>
+                </div>
+            </div>
+            <div class="relative w-1/2 flex flex-col items-center justify-center text-white p-4">
+                <img class="relative w-3/4 sm:w-1/2" src="./assets/img/1V8t-ezgif.com-speed2.gif" alt="Gif Mario Kart">
+            </div>
+        </div>
+
+    </section>
+
+    <img class="absolute left-0 -bottom-1 w-full h-2 z-10" src="./assets/img/line2.gif" alt="">
+
+    <section class="relative bg-gray-100 py-8">
+        <!-- <video id="background-video2" autoplay muted loop playsinline preload="auto"
+            class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover"
+            style="background: url('./assets/img/bg.jpeg') no-repeat;">
+            <source src="./assets/media/bg2.mp4" type="video/mp4">
+            Seu navegador não suporta o vídeo.
+        </video>
+
+        <div class="absolute inset-0 bg-black opacity-50" style="backdrop-filter: blur(10px);"></div> -->
+
+        
+    </section>
 </body>
+<script>
+    document.getElementById('background-video1').playbackRate = 1.5;
+</script>
+
 </html>
