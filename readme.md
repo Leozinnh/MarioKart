@@ -1,36 +1,24 @@
-# 🎮 **Mario Kart 8 Deluxe Landing Page** 🏎️💨
+# 🎮 **Mario Kart Landing Pages Collection** 🏎️💨
 
-**Mario Kart 8 Deluxe** é um dos jogos mais divertidos e emocionantes da Nintendo, trazendo corridas alucinantes com personagens icônicos do universo Mario. Este projeto é uma **landing page** interativa criada para divulgar o jogo e suas principais características de forma envolvente e colorida!
+Este projeto reúne **landing pages interativas** dedicadas a diferentes jogos da franquia **Mario Kart**, como **Mario Kart 8 Deluxe**, **Super Mario Kart 64** e muito mais!  
+Cada página é criada para destacar as características únicas de cada jogo, com design envolvente, colorido e dinâmico.
 
 ---
 
 ## 💻 **Tecnologias Utilizadas**
-Este projeto foi construído utilizando uma série de tecnologias modernas para garantir uma experiência de usuário incrível e responsiva.
+Este projeto foi construído utilizando uma série de tecnologias modernas para garantir uma experiência de usuário incrível e responsiva:
 
-- **HTML5**: Estruturação da página e conteúdo.
-- **CSS3** (com TailwindCSS): Estilização da página com o uso de classes utilitárias do TailwindCSS para garantir um layout responsivo e moderno.
-- **JavaScript**: Interatividade da página, incluindo a manipulação de vídeos e animações.
-- **Video Background**: Utilização de vídeos em segundo plano para criar um visual imersivo e dinâmico.
-- **GIFs**: Inclusão de gifs animados para mostrar a ação do jogo de maneira divertida.
-  
+- **HTML5**: Estruturação das páginas e conteúdo.
+- **CSS3** (com TailwindCSS): Estilização moderna utilizando classes utilitárias responsivas.
+- **JavaScript**: Interatividade da página, manipulação de vídeos, animações e efeitos especiais.
+- **Video Background**: Vídeos imersivos como plano de fundo para criar impacto visual.
+- **GIFs**: Animações divertidas para transmitir a ação dos jogos de forma vibrante.
+
 ---
 
 ## 🛠️ **Instalação**
-Para rodar este projeto localmente, siga os passos abaixo:
+Para rodar o projeto localmente, siga os passos abaixo:
 
 1. **Clone este repositório**:
    ```bash
    git clone https://github.com/Leozinnh/MarioKart.git
-
----
-
-## 🚗 **Sobre o Jogo**
-**Mario Kart 8 Deluxe** é uma versão expandida de **Mario Kart 8**, lançada para o **Nintendo Switch**. Com gráficos incríveis, novos modos de jogo, pistas emocionantes e a possibilidade de jogar tanto online quanto localmente, o jogo é ideal para fãs de corridas e para quem adora a diversão com os amigos. 
-
-Corra em pistas com gravidade alterada, use itens especiais e vença seus amigos de maneiras criativas e únicas!
-
-### **Principais Características:**
-- **Modos Multiplayer**: Jogue online ou localmente com até 8 jogadores.
-- **Pistas e Personagens Icônicos**: Conheça as pistas mais famosas e os personagens do universo Mario.
-- **Gráficos Imersivos**: Acelere com visuais de alta qualidade no Nintendo Switch.
-- **Itens Especiais**: Use itens para atrapalhar seus oponentes e ganhar vantagem.
