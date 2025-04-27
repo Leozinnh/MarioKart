@@ -6,22 +6,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MarioKart</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(145deg, #91e625, #0faefa, #f028ec, #fa7e2d, #f028ec, #0faefa, #91e625, #91e625);
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            background-size: 250%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 6s linear infinite;
+            opacity: 1;
+            border-radius: 10px;
+            transition-property: all;
+            transition-duration: 0.4s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .glow-on-hover:active {
+            color: #000
+        }
+
+        .glow-on-hover:active:after {
+            background: transparent;
+        }
+
+        .glow-on-hover:after {
+            z-index: -1;
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            left: 0;
+            top: 0;
+            border-radius: 10px;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0 0;
+            }
+
+            50% {
+                background-position: 250% 0;
+            }
+
+            100% {
+                background-position: 0 0;
+            }
+        }
+
+        .text-gradient {
+            background: -webkit-linear-gradient(145deg, #91e625, #0faefa, #f028ec, #fa7e2d, #f028ec, #0faefa, #91e625);
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 4px transparent;
+            color: black;
+        }
+
+        @keyframes blink-text {
+
+            0%,
+            50% {
+                color: white;
+                -webkit-text-stroke: 2px #2563eb;
+                /* azul */
+            }
+
+            50.01%,
+            100% {
+                color: transparent;
+                -webkit-text-stroke: 2px transparent;
+            }
+        }
+
+        .blink-text {
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            user-select: none;
+            -webkit-text-stroke: 2px #2563eb;
+            color: white;
+            animation: blink-text .6s steps(1, start) infinite;
+        }
+    </style>
 </head>
 
 <body class="m-0 p-0 w-full h-full overflow-x-hidden">
-    <section class="relative w-full h-screen overflow-hidden -z-10">
-        <video id="background-video1" autoplay muted loop playsinline preload="auto"
+    <section class="relative w-full h-screen overflow-hidden z-0">
+        <video id="background-video2" autoplay muted loop playsinline preload="auto"
             class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover"
             style="background: url('./assets/img/bg.jpeg') no-repeat;">
             <source src="./assets/media/bg1.mp4" type="video/mp4">
             Seu navegador não suporta o vídeo.
         </video>
 
-        <div class="absolute inset-0 bg-black opacity-50" style="backdrop-filter: blur(10px);"></div>
+        <div class="absolute inset-0 bg-black opacity-60 backdrop-blur-sm"></div>
 
         <div class="relative flex items-center justify-around flex-row flex-wrap h-screen z-10">
             <div class="relative w-1/2 min-w-24 flex flex-col items-start justify-center text-white py-4 px-12">
-                <img class="relative w-96 mb-6" src="./assets/img/deluxe2.png" alt="Mario Kart 8 Deluxe">
+                <img class="relative w-96 mb-6 select-none" src="./assets/img/deluxe2.png" alt="Mario Kart 8 Deluxe">
                 <p
                     class="relative max-w-3/4 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl leading-relaxed text-center sm:text-left mb-8 pl-4">
                     Mario Kart 8 Deluxe é um jogo de corrida da Nintendo onde você controla personagens icônicos do
@@ -30,38 +129,72 @@
                     online.
                     Com gráficos incríveis e jogabilidade divertida, é a escolha perfeita para qualquer fã de corridas!
                 </p>
-                <div class="flex justify-center pl-4">
-                    <a href="#"
-                        class="relative inline-block px-8 py-3 font-bold text-white text-xl rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 shadow-lg hover:scale-105 hover:shadow-2xl transition-transform duration-300 ease-in-out overflow-hidden">
-                        <span class="absolute inset-0 bg-white opacity-10 blur-md"></span>
-                        <span class="relative z-10">Jogar Agora</span>
-                    </a>
+                <div class="flex justify-center pl-6">
+                    <button class="glow-on-hover font-bold tracking-wider select-none" type="button">JOGAR
+                        AGORA</button>
                 </div>
             </div>
             <div class="relative w-1/2 flex flex-col items-center justify-center text-white p-4">
-                <img class="relative w-3/4 sm:w-1/2" src="./assets/img/1V8t-ezgif.com-speed2.gif" alt="Gif Mario Kart">
+                <img class="relative w-3/4 sm:w-1/2 select-none" src="./assets/img/1V8t-ezgif.com-speed2.gif"
+                    alt="Gif Mario Kart">
             </div>
         </div>
-
     </section>
 
-    <img class="absolute left-0 -bottom-1 w-full h-2 z-10" src="./assets/img/line2.gif" alt="">
+    <!-- <div class="absolute flex justify-center items-center text-center left-0 bottom-0 w-full h-1 z-10 select-none">
+        <img class="absolute left-0 -bottom-1 w-full h-2 z-10" src="./assets/img/line2.gif" alt="">
+        <img class="relative h-24 -bottom-4 mb-6 z-20" src="./assets/img/LogoMK64.webp" alt="">
+        <h2 class="relative -bottom-4 w-fit z-20 text-2xl font-bold text-center mb-8 text-gradient p-4 tracking-wider">Super Mario Kart 64</h2>
+    </div> -->
+    <div class="absolute flex justify-center items-center text-center left-0 bottom-0 w-full h-1 z-10 select-none">
+        <img class="absolute left-0 -bottom-1 w-full h-2 z-10" src="./assets/img/line2.gif" alt="">
+        <div class="relative w-full h-16 -bottom-4 mb-8 z-20 flex flex-row items-center justify-evenly overflow-hidden">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/bowser.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/donkeykong.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/koopatroopa.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/luigi.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/mario.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/peach.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/toad.gif" alt="">
+            <img class="relative h-16 z-20" src="./assets/img/pixel/yoshi.gif" alt="">
+        </div>
+    </div>
 
-    <section class="relative bg-gray-100 py-8">
-        <!-- <video id="background-video2" autoplay muted loop playsinline preload="auto"
+    <section class="relative w-full h-screen overflow-hidden z-0">
+        <video id="background-video1" autoplay muted loop playsinline preload="auto"
             class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -z-10 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            style="background: url('./assets/img/bg.jpeg') no-repeat;">
-            <source src="./assets/media/bg2.mp4" type="video/mp4">
+            style="background: #000">
+            <source src="./assets/media/bg10.mp4" type="video/mp4">
             Seu navegador não suporta o vídeo.
         </video>
 
-        <div class="absolute inset-0 bg-black opacity-50" style="backdrop-filter: blur(10px);"></div> -->
+        <div class="absolute inset-0 bg-black opacity-60 backdrop-blur-sm"></div>
 
-        
+        <div class="relative flex items-center justify-around flex-row flex-wrap h-screen z-10">
+            <div class="relative w-1/2 min-w-24 flex flex-col items-start justify-center text-white py-4 px-12">
+                <img class="relative w-96 mb-6 select-none" src="./assets/img/LogoMK64.webp" alt="Mario Kart 8 Deluxe">
+                <p
+                    class="relative max-w-3/4 text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl leading-relaxed text-center sm:text-left mb-8 pl-4">
+                    Super Mario Kart 64 é um jogo de corrida para Nintendo 64 onde Mario, Luigi, Peach e outros
+                    personagens disputam em pistas cheias de desafios. Use itens especiais para ganhar vantagem, desvie
+                    de armadilhas e prove quem é o melhor piloto no modo solo ou multiplayer!
+                </p>
+                <div class="flex justify-center pl-6">
+
+                    <button class="blink-text text-2xl cursor-pointer" type="button">
+                        JOGAR AGORA
+                    </button>
+                </div>
+            </div>
+            <div class="relative w-1/2 flex flex-col items-center justify-center text-white p-4">
+                <img class="relative w-3/4 sm:w-1/2 select-none p-12" src="./assets/img/WME3.gif" alt="Gif Mario Kart">
+            </div>
+        </div>
     </section>
 </body>
 <script>
     document.getElementById('background-video1').playbackRate = 1.5;
+    document.getElementById('background-video2').playbackRate = 1.5;
 </script>
 
 </html>
